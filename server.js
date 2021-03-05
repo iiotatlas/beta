@@ -20,7 +20,7 @@ app.use(cors())
 
 /** Directorio Publico (middleware)*/
 // app.use(express.static(path.join(__dirname, 'client', 'build')));
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build_v10')));
 
 /** Lectura y parseo del Body: mandar datos desde cliente */
 app.use( express.json() );
