@@ -1,0 +1,203 @@
+// ESQUEMA BASADO PARA UNA PLANTA 
+//TODO: INTEGRAR PARA MULTIPLES PLANTAS COMO ORGANIZACIONES
+// Esquema tentativo para el transbordo de datos, peticion y confirmacion al servidor
+
+
+
+//Request del logueo
+loginRequest: {
+    "email": "String",
+    // en el envio realizara la conversion en token
+    "password": "String",
+}
+
+
+//Respuesta si ingreso respuesta incorrecta
+loginResponse : {
+
+    "response": {
+        "OK": "Boolean => false",
+        "msg": "String",
+    }
+
+}
+
+
+//Respuesta si ingreso correctamente
+loginResponse : {
+
+    "response": {
+        "OK": "Boolean => true",
+        "uid": "String",
+        "name": "String",
+        "token" : "String",
+    }
+
+    //TODO: talvez seria mejor introducir en response y desaparecer response
+    "plant":{
+        "id": "Integer",
+        "logoUrl": "String",
+        "name": "String",
+        "lat": "String",
+        "long": "String",
+        "Qos": "Integer",
+
+        "systems": [
+
+            {
+                "id": "Integer",
+                "name": "String",
+                "numNodes": "Integer",
+                "nodos": [
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                ]
+            },
+            {
+                "id": "Integer",
+                "name": "String",
+                "numNodes": "Integer",
+                "nodos": [
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                ]
+            },
+            {
+                "id": "Integer",
+                "name": "String",
+                "numNodes": "Integer",
+                "nodos": [
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                    {
+                        "id": "Integer",
+                        "topic": "String(1/1/1)" ,
+                        "name": "String" ,
+                        "max": "Double",
+                        "min": "Double",
+                        "unit": "String",
+                    },
+                ]
+            }
+        ],
+
+    }
+}
+
+
+//Mandar una peticion al servidor para recibir los 120 datos para renderizar la grafica con todos sus detalles si es necesario
+reqDataLoteNode : {
+    "idNode": "Integer"
+}
+
+
+//Una vez echo click en uno de los Nodos, react envia peticion al server y la respuesta tendra estos parametros
+resDataLoteNode : {
+
+    //Opcional por el momento reenvio de datos
+    "property": {
+        "idNode": "1",
+        "unitY": "t",
+        "unitX": "min"
+    },
+
+    "data": [
+        {
+            "ejeY": "30",
+            "ejeX": "Double",
+        },
+        {
+            "ejeY": "60",
+            "ejeX": "Double",
+        },
+        {
+            "ejeY": "Double",
+            "ejeX": "Double",
+        },
+        {
+            "ejeY": "Double",
+            "ejeX": "Double",
+        },
+        {
+            "ejeY": "Double",
+            "ejeX": "Double",
+        },
+        // n parametros, para ser exactos enviaremos 120 datos
+    ]
+
+}
+
+/**
+    MQTT NODE SCHEMA
+
+*/
+// Emqx enviar el topico con la informacion
+// topid: 1/1/32:200 TODO: solo como ejemplo no es la estructura correcta
+// tendras que recuperar el nodo=> 32 y el paramatro de respuesta=>200
+
+//Esquema informativo de envio de datos emqx
+
+reqPublish: {
+    "topic": "String",
+    "value": "Double",
+}
+
+//buscar la manera de que no haya conflictos al subir la hora exacta, ya que muchas veces el gateway mandara un lote de datos cuando haya desconexion, averiguar para que procese los datos y guarde correctamente con el parametro
+processTopicToDB : {
+    "newValue": "value",
+
+
+    "newDate": "Time",
+
+}
+
+// cuestionantes, crear nuevos coleciones diariamente para no sobrecargar la base de datos ?
+// como podriamos gestionar demasiadas colecciones ?
+
+dataCollection: [
+    {
+
+    }
+]

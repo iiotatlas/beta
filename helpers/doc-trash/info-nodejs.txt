@@ -1,0 +1,50 @@
+
+super usuario
+
+actualizar manejador de paquetes de ubuntu
+sudo apt update
+
+apt install nodejs
+
+node --version             v8.10.0
+
+apt install npm
+
+npm -v                     3.5.2
+
+carpeta node en el dominio
+sudo su
+raiz
+cd /home/admin/web/servidoriot.ml/public_html/node
+npm install mysql
+npm install mqtt
+
+alertas a revisar
+WARN engine mqtt@4.2.6: wanted: {"node":">=10.0.0"} (current: {"node":"8.10.0","npm":"3.5.2"})
+WARN engine mqtt@4.2.6: wanted: {"node":">=10.0.0"} (current: {"node":"8.10.0","access_control@1.0.0 /home/admin/web/servidoriot.ml/public_html/node
+
+npm WARN ws@7.4.1 requires a peer of bufferutil@^4.0.1 but none was installed.
+npm WARN ws@7.4.1 requires a peer of utf-8-validate@^5.0.2 but none was installe  d.
+npm WARN access_control@1.0.0 No repository field.
+
+referenciando index.js
+ln -s /home/admin/web/servidoriot.ml/public_html/node/index.js /home/ubuntu/index.js
+
+para detener los archivos .js al modificarlos
+npm install -g nodemon
+
+run
+nodemon index.js
+
+
+
+
+para mantener los programas funcionando
+npm install pm2 -g
+run
+pm2 start index.js
+
+monitor
+pm2 monit
+
+pm2 stop 0   el numero que salga en el monitor

@@ -1,0 +1,58 @@
+Abrir el archivo de configuración emqx.conf
+sudo nano /emqx/etc/emqx.conf
+Dentro del archivo buscar 
+#Allow Anonymous authentication
+allow.anonymous=true
+Es necesario cambiarlo a falso para evitar que cualquier cliente se conecte.
+#Allow Anonymous authentication
+allow.anonymous=false
+Guardar y cerrar el archivo después de modificar.
+ 
+Posteriormente abrir archivo de configuración del plugin correspondiente a mysql
+sudo  nano /emqx/etc/plugins/emqx_auth_mysql.conf
+Dentro del archivo enfocarse a los siguientes parámetros:
+ 
+auth.mysql.server = 127.0.0.1:3306
+ 
+## MySQL username.
+## Value: String
+## auth.mysql.username =
+ 
+## MySQL password.
+## Value: String
+## auth.mysql.password =
+ 
+## MySQL database.
+## Value: String
+auth.mysql.database = mqtt
+ 
+## MySQL query timeout
+##Value: Duration
+##auth.mysql.query_timeout=5s
+ 
+## Password hash.
+## Value: plain | md5 | sha | sha256 | bcrypt
+auth.mysql.password_hash = sha
+ 
+ 
+Cambiar de la siguiente manera:
+ 
+auth.mysql.server = 127.0.0.1:3306
+ 
+## MySQL username.
+## Value: String
+auth.mysql.username =admin_serveriot  # el nombre de usuario de su base de datos que ingresan en Heidi
+ 
+## MySQL password.
+## Value: String
+auth.mysql.password =123456789     # la contraseña de usuario de base de datos
+ 
+## MySQL database.
+## Value: String
+auth.mysql.database = admin_serveriot  #el nombre que le pusieron a su base de datos
+ 
+## Value: plain | md5 | sha | sha256 | bcrypt
+auth.mysql.password_hash = plain
+ 
+Posterior a eso no olvidar en arrancar el plugin de mysql en el dashboard, importante reiniciar emqx desde la terminal
+root@domain.xx/emqx# ./bin/emqx restart

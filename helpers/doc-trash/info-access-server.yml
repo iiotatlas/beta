@@ -1,0 +1,63 @@
+PURTOS QUE ABRIMOS CUANDO CREAMOS LA INSTANCIA
+SSH 22
+FTP 21
+HTTP 80
+HTTPS 443
+VESTA 8083
+
+COMANDOS PARA INSTALACION VESTA
+
+
+
+    # Connect to your server as root via SSH ssh root@your.server
+    # Download installation script curl -O http://vestacp.com/pub/vst-install.sh
+    # Run it bash vst-install.sh --nginx yes --apache yes --phpfpm no --named yes --remi yes --vsftpd yes --proftpd no --iptables yes --fail2ban yes --quota no --exim no --dovecot no --spamassassin no --clamav no --softaculous no --mysql yes --postgresql no --hostname servidoriot.ml --email jhohans.noza@gmail.com --password 123456789 -f
+
+https://52.67.166.235:8083
+    username: admin
+    password: 123456789
+
+frenom
+El Número de Pedido es: 2523022410
+
+base de datos mysql
+admin_serveriot
+123456789
+
+puertos 
+1883,8883,8093,8094,8090,18083
+
+1883	        Puerto de protocolo MQTT/TCP
+11883	        Puerto interno del protocolo MQTT/TCP, utilizado únicamente para la conexión de cliente local
+8883	        Puerto de protocolo MQTT/SSL
+8083->8093	Puerto de protocolo MQTT/WS
+8084->8094	Puerto de protocolo MQTT/WSS
+
+Oyente	Descripción
+Escucha TCP	Un agente de escucha para MQTT que utiliza TCP
+Escucha SSL	Un agente de escucha seguro para MQTT que utiliza TLS
+Websocket Listener	Un agente de escucha para MQTT sobre WebSockets
+Agente de escucha de Websocket seguro	Un agente de escucha seguro para MQTT a través de WebSockets seguros (TLS)
+broker
+wget https://www.emqx.io/downloads/broker/v4.2.2/emqx-ubuntu18.04-4.2.2-x86_64.zip
+
+unzip emqx-ubuntu18.04-4.2.2-x86_64.zip
+
+./bin/emqx start
+
+configuracion puertos
+/emqx/etc# nano emqx.conf
+
+listener.ws.external = 8083
+
+/emqx/etc/plugins# nano emqx_management.conf
+management.listener.http = 8090
+
+http://servidoriot.ml:18083/
+
+admin
+public
+
+redireccion de certificados
+ln -s /home/admin/conf/web/ssl.servidoriot.ml.crt /emqx/etc/certs/cert.pem
+ln -s /home/admin/conf/web/ssl.servidoriot.ml.key /emqx/etc/certs/key.pem
