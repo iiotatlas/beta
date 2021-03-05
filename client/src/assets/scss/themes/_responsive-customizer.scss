@@ -1,0 +1,100 @@
+/**
+    Customazer nodos
+*/
+
+//$desktop: 1366px
+@media only screen and (max-width: $desktop) {
+  .card--node {
+    &.earning-card.card .card-body .chart-left {
+      // padding: 60px;
+    }
+    &.earning-card.card .card-body .chart-right {
+        padding: 0;
+    }
+
+    &.earning-card .card-body > .row .chart-right {
+        padding-bottom: 0;
+    }
+    &.earning-card .card-body > .row > div .chart-left .left-btn {
+        text-align: left;
+    }
+    &.earning-card .card-body > .row > div .chart-left .left-btn {
+        flex: 0 0 33%;
+        max-width: 33%;
+        margin-bottom: 10px;
+    }
+    &.earning-card .card-body > .row > div .chart-left .left_side_earning:first-child {
+        flex: 0 0 33%;
+        max-width: 33%;
+        margin-bottom: 10px;
+        order: -3;
+    }
+    &.card--node.earning-card .card-body > .row > div .chart-left .left_side_earning:nth-child(2) {
+        order: -2;
+    }
+    &.earning-card .card-body > .row > div .chart-left .left_side_earning + .left_side_earning {
+        margin-bottom: 10px;
+    }
+    &.earning-card.card .card-body .media .media-left i {
+        font-size: 30px;
+    }
+  }
+}
+
+
+//$medium-desktop: 1199px
+@media only screen and (max-width: $medium-desktop) {
+    .card--node {
+        &.earning-card .card-body > .row .border-top > div:last-child {
+            margin-top: 0;
+        }
+        &.earning-card .card-body > .row > div .chart-left .left_side_earning:nth-child(2n + 1) {
+            text-align: left;
+        }
+        &.earning-card .card-body > .row > div .chart-left .left_side_earning + .left_side_earning {
+            flex: 0 0 33%;
+            max-width: 33%;
+        }
+        .card-body {
+            padding: 20px;
+        }
+    }
+}
+
+//$medium-phone: 991px
+// @media only screen and (max-width: $tablet) {}
+
+//$medium-phone: 575px
+@media only screen and (max-width: $medium-phone) {
+    .card--node {
+        &.earning-card .card-body > .row > div .row > div .current-sale-container {
+            padding-left: 0;
+        }
+        &.earning-card .card-body > .row > div .chart-left .left-btn,
+        &.earning-card .card-body > .row > div .chart-left .left_side_earning:nth-child(n) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        &.earning-card.card .card-body .left-btn a.btn {
+            width: 100%;
+        }
+        &.earning-card .card-body > .row .border-top > div {
+            padding-right: 0;
+        }
+        &.earning-card .card-body > .row .border-top > div {
+            &, &:last-child {
+                margin-top: 10px;
+                
+            }
+        }
+        // &.earning-card .card-body > .row > div .media {
+        //     max-width: 400px;
+        //     margin-left: auto;
+        //     margin-right: auto;
+        //     text-align: center;
+        // }
+        &.card .card-body {
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// Emqx enviar el topico con la informacion
+// topid: 1/1/32:200 TODO: solo como ejemplo no es la estructura correcta
+// tendras que recuperar el nodo=> 32 y el paramatro de respuesta=>200
+
+//Esquema informativo de envio de datos emqx
+
+reqPublish: {
+    "topic": "String",
+    "value": "Double",
+}
+
+//buscar la manera de que no haya conflictos al subir la hora exacta, ya que muchas veces el gateway mandara un lote de datos cuando haya desconexion, averiguar para que procese los datos y guarde correctamente con el parametro
+processTopicToDB : {
+    "newValue": "value",
+
+
+    "newDate": "Time",
+
+}
+
+// cuestionantes, crear nuevos coleciones diariamente para no sobrecargar la base de datos ?
+// como podriamos gestionar demasiadas colecciones ?
+
+dataCollection: [
+    {
+
+    }
+]

@@ -1,0 +1,100 @@
+/*! -----------------------------------------------------------------------------------
+
+    Template Name: Atlas Admin
+    Template URI: http://iiotatlas.com/atlas/theme
+    Description: This is Admin theme
+    Author: Atlas-Automation
+    Author URI: https://iiotatlas.com/user/Atlas-Automation
+
+-----------------------------------------------------------------------------------
+ */
+
+// *** utils ***
+
+
+@import "utils/variables";
+@import "utils/helpers";
+
+:root {
+    --theme-deafult: #5141e2;
+    --theme-secondary: #863a07;
+}
+
+// *** base ***
+@import "base/reset";
+@import "base/typography";
+
+
+//  *** components ***
+@import "components/according";
+@import "components/alert";
+@import "components/avatars";
+@import "components/badge";
+@import "components/bookmark";
+@import "components/breadcrumb";
+@import "components/builders";
+
+@import "components/buttons";
+
+@import "components/card";
+@import "components/color";
+@import "components/datepicker";
+@import "components/dropdown";
+@import "components/datatable";
+@import "components/form-input";
+@import "components/form-wizard";
+@import "components/forms";
+@import "components/icons";
+@import "components/list";
+@import "components/loader";
+@import "components/popover";
+@import "components/print";
+@import "components/radio";
+@import "components/ribbon";
+@import "components/switch";
+@import "components/tab";
+@import "components/table";
+@import "components/touchspin";
+@import "components/tour";
+@import "components/typeahead-search";
+@import "components/react-plugin";
+@import "components/slick.scss";
+@import "components/slick-theme.scss";
+@import "components/nodos";
+@import "components/schema-plant";
+
+
+
+
+//	*** pages ***
+
+@import "pages/chart";
+@import "pages/bookmark-app";
+@import "pages/dashboard_2";
+@import "pages/dashboard_default";
+@import "pages/errorpage";
+@import "pages/language";
+@import "pages/login";
+@import "pages/megaoption";
+@import "pages/page";
+@import "pages/user-profile";
+
+
+// *** layout *** 
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/search";
+@import "layout/sidebar";
+@import "layout/rtl";
+@import "layout/box-layout";
+
+/* ---------------------
+	*** themes ***
+-----------------------*/
+@import "themes/dark";
+@import "themes/dark-sidebar";
+@import "themes/theme-customizer";
+@import "themes/responsive";
+@import "themes/responsive-customizer";

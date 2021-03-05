@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Conceptos
 
-## Available Scripts
+## Hooks de react
 
-In the project directory, you can run:
+Para tener conceptos basicos de los hook de react, se tiene la documentacion de los hooks mas utilizados en 
+ https://es.reactjs.org/docs/hooks-reference.html
 
-### `npm start`
+# Instalaciones o paquetes necesarios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Extension | Description    |
+| -------- | -------- |
+| react-router-dom  | para realizar al estructuracion de la rutas  |
+| React-Strap  | Framework para estilos usandio bootstrap  |
+| apexchart  | Creacion de Graficas   |
+| react-feather  | Iconos   |
+| jsdoc  | Documentacion automatica, mejor codigo   |
+| react-toastify  | Notificaciones   |
+| sweetalert2  | Alertas en Pantalla   |
+| react-transition-group  | CSS transiciones   |
+| react-switch-lang  | Traductor de idiomas basado en i18n... |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+icofont: iconos (scss icoicon)
+# Despliegue de aplicacion
 
-### `npm test`
+ >> npm run build
+ 
+ >> npm install -g serve
+ >> serve -s build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Navegadarores soportados
 
-### `npm run build`
+| Navegadores | Version igual o superior |
+| ------------- | ------------- |
+| Chrome  | > v  |
+| Edge  | > v  |
+| Safari  | > v  |
+| Firefox  | > v  |
+| Otros  | ---  |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Tamanio de pantalla optimizados
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Pantalla | Ancho    |
+| -------- | -------- |
+| Desktop  | 1440px or 1440px  |
+| Desktop  | 1200px   |
+| Desktop  | 1024px   |
+| Tablet  | 992px   |
+| Tablet  | 768px   |
+| Mobile  | 576px   |
+| Mobile  | 360px   |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Problemas al usar mongodb-compass en una nueva computadora
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://prnt.sc/w7hplm al crear un entorno en una nueva computadora me sale el siguiente error y sin poder conectarme, al igual que tambien el codigo https://prnt.sc/w7hq9b
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+RESOLVE .- La solucion esta en https://prnt.sc/w7hrdi o https://stackoverflow.com/questions/62342929/mongodb-atlas-connection-fails-with-error-mongoserverselectionerror-connection
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### ayudas
+> visualizar el proyecto en otro puerto
+"start": "set PORT=3006 && react-scripts start",
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## AWS S3
+1. direction : sao paulo
+1. search: s3
+    1.1. crear bucket: name=> ptar
+    1.1. Block all public access: false
+1. search: iam
+    1.1. iam > policies > create policy
+    1.1. service: choose to s3
+    1.1. actions > All S3 actions: true
+    1.1. resource > object > any: true
+    1.1. resource > bucket > add ARN > bucket name: ptar
+    1.1. click "Review Policy"
+        1.1.1. name: s3BucketAccessPtar
+1. iam > users
+    1.1. user name: user-ptar
+    1.1. type access: acceso mediante programacion
+    1.1. click => Attach existing policies directly
+        1.1.1. search: s3BucketAccessPtar: true
+    1.1. click => next
+    1.1. click => next
+    1.1. click => create user
 
-## Learn More
+    1.1. access key ID: AKIAULBXYXMSRKTBFKNM
+    1.1. Secret access key: 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
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. conectar bucket S3 con ptar=back
