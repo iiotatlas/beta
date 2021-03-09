@@ -315,16 +315,16 @@ body {
 				border-right: 4px solid $dark-card-border;
 			}
 		}
-		.contacts-tabs {
-			.nav-pills {
-				border-right: 1px solid $dark-card-border;
-				.nav-item {
-					+ .nav-item {
-						border-top: 1px solid $dark-card-border;
-					}
-				}
-			}
-		}
+		// .contacts-tabs {
+		// 	.nav-pills {
+		// 		border-right: 1px solid $dark-card-border;
+		// 		.nav-item {
+		// 			+ .nav-item {
+		// 				border-top: 1px solid $dark-card-border;
+		// 			}
+		// 		}
+		// 	}
+		// }
 		.contact-profile {
 			.icon-wrapper {
 				background-color: $dark-body-background;
@@ -1616,17 +1616,17 @@ body {
 			}
 		}
 
-		.contacts-tabs {
-			.nav-pills {
-				border-right: 1px solid $dark-card-border;
+		// .contacts-tabs {
+		// 	.nav-pills {
+		// 		border-right: 1px solid $dark-card-border;
 
-				.nav-link {
-					+.nav-link {
-						border-top: 1px solid $dark-card-border;
-					}
-				}
-			}
-		}
+		// 		.nav-link {
+		// 			+.nav-link {
+		// 				border-top: 1px solid $dark-card-border;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		.list-persons {
 			.profile-mail {
@@ -2092,11 +2092,11 @@ body {
 			border: none;
 		}
 
-		.popover {
-			code {
-				background-color: unset;
-			}
-		}
+		// .popover {
+		// 	code {
+		// 		background-color: unset;
+		// 	}
+		// }
 
 		.apex-chart-container {
 			.apexcharts-legend {
@@ -3778,55 +3778,55 @@ body {
 						}
 					}
 
-					.form-builder-header-1,
-					.form-builder-2-header {
-						background-color: $dark-body-background;
-					}
+					// .form-builder-header-1,
+					// .form-builder-2-header {
+					// 	background-color: $dark-body-background;
+					// }
 
-					.form-builder {
-						.nav-primary {
-							.show {
-								>.nav-link {
-									color: $white;
-								}
-							}
+					// .form-builder {
+					// 	.nav-primary {
+					// 		.show {
+					// 			>.nav-link {
+					// 				color: $white;
+					// 			}
+					// 		}
 
-							.nav-link {
-								color: $dark-all-font-color;
+					// 		.nav-link {
+					// 			color: $dark-all-font-color;
 
-								&.active {
-									color: $white;
-								}
-							}
+					// 			&.active {
+					// 				color: $white;
+					// 			}
+					// 		}
 
-							.nav-pills.nav-primary {
-								.show {
-									>.nav-link {
-										color: $white;
-									}
-								}
+					// 		.nav-pills.nav-primary {
+					// 			.show {
+					// 				>.nav-link {
+					// 					color: $white;
+					// 				}
+					// 			}
 
-								.nav-link {
-									color: $dark-all-font-color;
+					// 			.nav-link {
+					// 				color: $dark-all-font-color;
 
-									&.active {
-										color: $white;
-									}
-								}
-							}
+					// 				&.active {
+					// 					color: $white;
+					// 				}
+					// 			}
+					// 		}
 
-						}
+					// 	}
 
-						.drag-box {
-							fieldset {
-								border: 1px solid $dark-border-color;
-							}
-						}
+					// 	.drag-box {
+					// 		fieldset {
+					// 			border: 1px solid $dark-border-color;
+					// 		}
+					// 	}
 
-						.help-block {
-							color: $dark-small-font-color;
-						}
-					}
+					// 	.help-block {
+					// 		color: $dark-small-font-color;
+					// 	}
+					// }
 
 					#viewhtml {
 						.render {
@@ -3836,11 +3836,11 @@ body {
 						}
 					}
 
-					.form-builder-column {
-						.drag-bx {
-							border: 1px dotted $dark-border-color;
-						}
-					}
+					// .form-builder-column {
+					// 	.drag-bx {
+					// 		border: 1px dotted $dark-border-color;
+					// 	}
+					// }
 
 					.wizard-4 {
 						ul.anchor {

@@ -3,26 +3,33 @@ $header-height: 100px;
 
 // Schema Plants
 .schema-plant {
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
+
     &__container {
-        max-height: 100vh;
-        max-width: 100vh;
+        max-height: 844px;
+        max-width: 1350.4px;
         margin: auto;
+        position: relative;
     }
+
+    &__figure-bg {
+        margin-bottom: 0;
+    }
+
     &__image-bg {
         width: 100%;
     }
 
-    &__container-buttons {
+    &__items-button {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
-    //TODO: mover codigo para que sea dinamico
     &__item-button {
         position: absolute;
         transform: translate(-50%, -50%);
@@ -41,9 +48,22 @@ $header-height: 100px;
 
             transition: transform .23s ease;
 
+            position: relative;
+
             &:hover {
                 transform: scale(1.1);
+
+                // &::before {
+                //     display: initial;
+                // }
+
             }
+
+            // &::before {
+            //     content:"before";
+            //     position: absolute;
+            //     display: none;
+            // }
         }
         &:nth-child(1){
             top: 32%;

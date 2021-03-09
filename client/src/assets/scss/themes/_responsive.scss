@@ -1017,9 +1017,9 @@
     padding-right: 15px !important;
   }
 
-  .login-card {
-    background: transparent;
-  }
+  // .login-card {
+  //   background: transparent;
+  // }
 
   .knowledgebase-bg {
     height: 400px;
@@ -1683,10 +1683,10 @@
     margin-bottom: 12px;
   }
 
-  // ribbons page
-  .ribbon-space-bottom {
-    top: 9px;
-  }
+  // // ribbons page
+  // .ribbon-space-bottom {
+  //   top: 9px;
+  // }
 
   // touchspin page
   .bootstrap-touchspin {
@@ -1854,11 +1854,11 @@
       margin-top: 90px !important;
     }
 
-    ul {
-      &.nav-pills {
-        max-height: calc(100vh - 84px);
-      }
-    }
+    // ul {
+    //   &.nav-pills {
+    //     max-height: calc(100vh - 84px);
+    //   }
+    // }
 
   }
 
@@ -3134,48 +3134,48 @@
     }
   }
 
-  .form-builder-column {
-    .form-body {
-      min-height: 250px;
-    }
-  }
+  // .form-builder-column {
+  //   .form-body {
+  //     min-height: 250px;
+  //   }
+  // }
 
-  .form-builder-2-header {
-    flex-wrap: wrap;
+  // .form-builder-2-header {
+  //   flex-wrap: wrap;
 
-    >div {
-      width: 100%;
-      margin-top: 10px;
+  //   >div {
+  //     width: 100%;
+  //     margin-top: 10px;
 
-      nav {
-        float: none;
-      }
-    }
-  }
+  //     nav {
+  //       float: none;
+  //     }
+  //   }
+  // }
 
   // form-builder
   .lg-mt-col {
     margin-top: 20px;
   }
 
-  .form-builder {
-    .drag-box {
-      fieldset {
-        padding: 20px;
-        margin-top: 20px;
-      }
-    }
+  // .form-builder {
+  //   .drag-box {
+  //     fieldset {
+  //       padding: 20px;
+  //       margin-top: 20px;
+  //     }
+  //   }
 
-    #components {
-      margin-top: 20px;
-    }
+  //   #components {
+  //     margin-top: 20px;
+  //   }
 
-    .component {
-      label {
-        padding-top: 0px;
-      }
-    }
-  }
+  //   .component {
+  //     label {
+  //       padding-top: 0px;
+  //     }
+  //   }
+  // }
 
   //mega menu
   .mega-menu {
@@ -4170,12 +4170,12 @@
   }
 
   // list css
-  .tab-javascript {
-    .nav-pills {
-      text-align: left;
-    }
-    margin-bottom: 15px;
-  }
+  // .tab-javascript {
+  //   .nav-pills {
+  //     text-align: left;
+  //   }
+  //   margin-bottom: 15px;
+  // }
 
   // todo css
 
@@ -4881,29 +4881,29 @@
     padding: 15px;
   }
 
-  // helper classes page ends
-  .form-builder-2-header {
-    ul {
-      li {
-        text-align: left;
-      }
-    }
+  // // helper classes page ends
+  // .form-builder-2-header {
+  //   ul {
+  //     li {
+  //       text-align: left;
+  //     }
+  //   }
 
-    .form-inline {
-      display: block;
-      width: 100%;
+  //   .form-inline {
+  //     display: block;
+  //     width: 100%;
 
-      .form-group {
-        width: 100%;
-        margin-right: 0;
-      }
+  //     .form-group {
+  //       width: 100%;
+  //       margin-right: 0;
+  //     }
 
-      button {
-        width: 100%;
-        text-align: left;
-      }
-    }
-  }
+  //     button {
+  //       width: 100%;
+  //       text-align: left;
+  //     }
+  //   }
+  // }
 
   .page-builder {
     .btn-grid {
@@ -5020,9 +5020,9 @@
   }
 
   // tab material end
-  .nav-pills {
-    text-align: center;
-  }
+  // .nav-pills {
+  //   text-align: center;
+  // }
 
   .crm-overall {
     margin: 0 -15px -15px;
@@ -5924,15 +5924,15 @@
 
       .page-body-wrapper {
         &.document-content {
-          .page-sidebar {
-            .nav-pills {
-              text-align: left;
+          // .page-sidebar {
+          //   .nav-pills {
+          //     text-align: left;
 
-              .nav {
-                text-align: left;
-              }
-            }
-          }
+          //     .nav {
+          //       text-align: left;
+          //     }
+          //   }
+          // }
 
           .page-body {
             margin-top: 75px !important;
@@ -6120,11 +6120,11 @@
     }
   }
 
-  .nav-pills {
-    li {
-      width: 100%;
-    }
-  }
+  // .nav-pills {
+  //   li {
+  //     width: 100%;
+  //   }
+  // }
 
   .reset-password-box {
     width: 290px;
@@ -6666,18 +6666,18 @@
     }
   }
 
-  // form-builder
-  .form-builder {
-    #components {
-      .component {
-        .form-group {
-          #button1id {
-            margin-bottom: 15px;
-          }
-        }
-      }
-    }
-  }
+  // // form-builder
+  // .form-builder {
+  //   #components {
+  //     .component {
+  //       .form-group {
+  //         #button1id {
+  //           margin-bottom: 15px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   // according
   .default-according {

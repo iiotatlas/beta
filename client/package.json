@@ -74,6 +74,7 @@
     "start": "set PORT=3060 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "prod": "npm run-script build && serve build",
     "eject": "react-scripts eject"
   },
   "resolutions": {

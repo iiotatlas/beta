@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import man from "../assets/images/dashboard/profile.jpg";
-import { Container, Row, Col, Form, FormGroup, Input, Label, Button } from "reactstrap";
-import {  fetchWithoutToken } from "../services/fack.backend";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  FormGroup,
+  Input,
+  Label,
+  Button,
+} from "reactstrap";
+import { fetchWithoutToken } from "../services/fack.backend";
 import { withRouter } from "react-router-dom";
 import { Password, EmailAddress } from "../constant";
 
@@ -20,20 +29,18 @@ const Logins = () => {
   }, [value, name]);
 
   const loginWithJwt = async (email, password) => {
-
-    const resp = await fetchWithoutToken('auth', { email, password }, "POST");
+    const resp = await fetchWithoutToken("auth", { email, password }, "POST");
     const body = await resp.json();
 
-    if( body.ok ) {
+    if (body.ok) {
       setValue(body.profile);
       setName(body.name);
       localStorage.setItem("token", body.token);
       localStorage.setItem("plant", JSON.stringify(body.plant));
-      window.location.href = `${process.env.PUBLIC_URL}/home`;
-
+      // window.location.href = `${process.env.PUBLIC_URL}/home`;
+      window.location.href = `${process.env.PUBLIC_URL}/`;
     } else {
-      alert('Password o Correo incorrecto');
-
+      alert("Password o Correo incorrecto");
     }
     return null;
   };
@@ -45,7 +52,7 @@ const Logins = () => {
           <div className="login-card">
             <div>
               <div>
-                <a className="logo" href="index.html">
+                <a className="logo" href="/">
                   <img
                     className="img-fluid for-light"
                     src={require("../assets/images/logo/login.png")}
@@ -59,7 +66,6 @@ const Logins = () => {
                 </a>
               </div>
               <div className="login-main login-tab">
-
                 <Form className="theme-form">
                   <h4>{"Ingresar con tu Cuenta"}</h4>
                   <p>{"Ingrese su Email y Contrasenia"}</p>
@@ -99,7 +105,6 @@ const Logins = () => {
                     </Button>
                   </div>
                 </Form>
-
               </div>
             </div>
           </div>

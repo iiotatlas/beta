@@ -2220,114 +2220,114 @@
     }
   }
 
-  .form-builder-column {
-    .tab-content {
-      .tab-pane {
-        .theme-form {
-          .ui-draggable {
-            .input-group {
-              >.input-group-prepend {
-                >.input-group-text {
-                  border-top-left-radius: 0;
-                  border-bottom-left-radius: 0;
-                  border-top-right-radius: 0.25rem;
-                  border-bottom-right-radius: 0.25rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  // .form-builder-column {
+  //   .tab-content {
+  //     .tab-pane {
+  //       .theme-form {
+  //         .ui-draggable {
+  //           .input-group {
+  //             >.input-group-prepend {
+  //               >.input-group-text {
+  //                 border-top-left-radius: 0;
+  //                 border-bottom-left-radius: 0;
+  //                 border-top-right-radius: 0.25rem;
+  //                 border-bottom-right-radius: 0.25rem;
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
 
-    #pills-tabContent {
-      .theme-form {
+  //   #pills-tabContent {
+  //     .theme-form {
 
-        .form-group,
-        .ui-draggable {
-          .input-group {
-            #buttondropdown {
-              margin-right: unset;
-              margin-left: 15px;
-            }
+  //       .form-group,
+  //       .ui-draggable {
+  //         .input-group {
+  //           #buttondropdown {
+  //             margin-right: unset;
+  //             margin-left: 15px;
+  //           }
 
-            .input-group-btn {
-              button {
-                border-radius: 4px !important;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  //           .input-group-btn {
+  //             button {
+  //               border-radius: 4px !important;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  .form-horizontal {
-    &.theme-form {
-      fieldset {
-        .tab-content {
-          .tab-pane {
-            .component {
-              .form-group {
-                .text-lg-left {
-                  text-align: right !important;
-                }
+  // .form-horizontal {
+  //   &.theme-form {
+  //     fieldset {
+  //       .tab-content {
+  //         .tab-pane {
+  //           .component {
+  //             .form-group {
+  //               .text-lg-left {
+  //                 text-align: right !important;
+  //               }
 
-                .input-group {
-                  .input-group-prepend {
+  //               .input-group {
+  //                 .input-group-prepend {
 
-                    .btn,
-                    .input-group-text {
-                      border-top-left-radius: 0;
-                      border-bottom-left-radius: 0;
-                      border-top-right-radius: 0.25rem;
-                      border-bottom-right-radius: 0.25rem;
-                    }
+  //                   .btn,
+  //                   .input-group-text {
+  //                     border-top-left-radius: 0;
+  //                     border-bottom-left-radius: 0;
+  //                     border-top-right-radius: 0.25rem;
+  //                     border-bottom-right-radius: 0.25rem;
+  //                   }
 
-                    .btn-right,
-                    .checkbox-radius {
-                      border-top-left-radius: 0.25rem;
-                      border-bottom-left-radius: 0.25rem;
-                      border-top-right-radius: 0;
-                      border-bottom-right-radius: 0;
-                    }
-                  }
+  //                   .btn-right,
+  //                   .checkbox-radius {
+  //                     border-top-left-radius: 0.25rem;
+  //                     border-bottom-left-radius: 0.25rem;
+  //                     border-top-right-radius: 0;
+  //                     border-bottom-right-radius: 0;
+  //                   }
+  //                 }
 
-                  #prependedcheckbox {
-                    border-top-right-radius: 0 !important;
-                    border-bottom-right-radius: 0 !important;
-                  }
+  //                 #prependedcheckbox {
+  //                   border-top-right-radius: 0 !important;
+  //                   border-bottom-right-radius: 0 !important;
+  //                 }
 
-                  #appendedcheckbox {
-                    border-right-color: $light-semi-gray;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+  //                 #appendedcheckbox {
+  //                   border-right-color: $light-semi-gray;
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
 
-    }
-  }
+  //   }
+  // }
 
-  .form-builder {
-    .component {
-      .form-group {
-        .input-group {
-          #buttondropdown {
-            margin-right: unset;
-            margin-left: -1px;
-          }
-        }
+  // .form-builder {
+  //   .component {
+  //     .form-group {
+  //       .input-group {
+  //         #buttondropdown {
+  //           margin-right: unset;
+  //           margin-left: -1px;
+  //         }
+  //       }
 
-        .pl-md-radios {
-          padding-right: 37px;
-          padding-left: unset;
-        }
-      }
-    }
-  }
+  //       .pl-md-radios {
+  //         padding-right: 37px;
+  //         padding-left: unset;
+  //       }
+  //     }
+  //   }
+  // }
 
   // compact small page
   .page-wrapper {
@@ -2435,13 +2435,13 @@
   }
 
   // form builder-2 page
-  .form-builder-2-header {
-    >div {
-      nav {
-        float: left;
-      }
-    }
-  }
+  // .form-builder-2-header {
+  //   >div {
+  //     nav {
+  //       float: left;
+  //     }
+  //   }
+  // }
 
   .radio {
     label {
@@ -2688,18 +2688,18 @@
     }
   }
 
-  @each $var in $alert-name {
-    $i: index($alert-name, $var);
+  // @each $var in $alert-name {
+  //   $i: index($alert-name, $var);
 
-    .alert-#{$var}.inverse {
-      &:before {
-        border-right: 7px solid nth($alert-color, $i);
-        right: 54px;
-        left: unset;
-        border-left: unset;
-      }
-    }
-  }
+  //   .alert-#{$var}.inverse {
+  //     &:before {
+  //       border-right: 7px solid nth($alert-color, $i);
+  //       right: 54px;
+  //       left: unset;
+  //       border-left: unset;
+  //     }
+  //   }
+  // }
 
   .alert-dismissible {
     .close {
@@ -3054,39 +3054,39 @@
     }
   }
 
-  .product-box {
+  // .product-box {
 
-    .ribbon-bookmark.ribbon-vertical-left.ribbon-info:before,
-    .ribbon-bookmark.ribbon-vertical-right.ribbon-info:before {
-      border-left-color: #007bff;
-    }
+  //   .ribbon-bookmark.ribbon-vertical-left.ribbon-info:before,
+  //   .ribbon-bookmark.ribbon-vertical-right.ribbon-info:before {
+  //     border-left-color: #007bff;
+  //   }
 
-    .ribbon-bookmark.ribbon-vertical-left:before,
-    .ribbon-bookmark.ribbon-vertical-right:before {
-      right: 0;
-      left: unset;
-      border-left: 15px solid #2a3142;
-    }
+  //   .ribbon-bookmark.ribbon-vertical-left:before,
+  //   .ribbon-bookmark.ribbon-vertical-right:before {
+  //     right: 0;
+  //     left: unset;
+  //     border-left: 15px solid #2a3142;
+  //   }
 
-    .ribbon-bookmark.ribbon-info:before {
-      border-left-color: transparent;
-    }
+  //   .ribbon-bookmark.ribbon-info:before {
+  //     border-left-color: transparent;
+  //   }
 
-    .ribbon-warning.ribbon-clip:before {
-      border-left-color: #ff850d;
-      border-right-color: unset;
-    }
+  //   .ribbon-warning.ribbon-clip:before {
+  //     border-left-color: #ff850d;
+  //     border-right-color: unset;
+  //   }
 
-    .ribbon-clip {
-      right: -14px;
-      left: unset;
+  //   .ribbon-clip {
+  //     right: -14px;
+  //     left: unset;
 
-      &:before {
-        right: 0;
-        left: unset;
-      }
-    }
-  }
+  //     &:before {
+  //       right: 0;
+  //       left: unset;
+  //     }
+  //   }
+  // }
 
   .product-hover {
     ul {
@@ -3417,21 +3417,21 @@
     }
   }
 
-  // ribbons page
-  .ribbon-left {
-    right: auto;
-    left: -2px;
-  }
+  // // ribbons page
+  // .ribbon-left {
+  //   right: auto;
+  //   left: -2px;
+  // }
 
-  .ribbon-vertical-left {
-    right: auto;
-    left: 12px;
-  }
+  // .ribbon-vertical-left {
+  //   right: auto;
+  //   left: 12px;
+  // }
 
-  .ribbon-vertical-right {
-    right: auto;
-    left: 12px;
-  }
+  // .ribbon-vertical-right {
+  //   right: auto;
+  //   left: 12px;
+  // }
 
   // search page
   .star-ratings {
@@ -3886,38 +3886,38 @@
     }
   }
 
-  // popover page
-  .popover.top,
-  .popover.bottom {
-    >.arrow:after {
-      margin-right: -10px;
-      margin-left: unset;
-    }
-  }
+  // // popover page
+  // .popover.top,
+  // .popover.bottom {
+  //   >.arrow:after {
+  //     margin-right: -10px;
+  //     margin-left: unset;
+  //   }
+  // }
 
-  // touchspin page
-  .bootstrap-touchspin {
-    >.input-group-append {
+  // // touchspin page
+  // .bootstrap-touchspin {
+  //   >.input-group-append {
 
-      >.btn,
-      >.input-group-text {
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-      }
-    }
+  //     >.btn,
+  //     >.input-group-text {
+  //       border-top-right-radius: 0 !important;
+  //       border-bottom-right-radius: 0 !important;
+  //       border-top-left-radius: 0 !important;
+  //       border-bottom-left-radius: 0 !important;
+  //     }
+  //   }
 
-    >.form-control,
-    >.custom-select {
-      &:not(:last-child) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
-  }
+  //   >.form-control,
+  //   >.custom-select {
+  //     &:not(:last-child) {
+  //       border-top-left-radius: 0;
+  //       border-bottom-left-radius: 0;
+  //       border-top-right-radius: 0;
+  //       border-bottom-right-radius: 0;
+  //     }
+  //   }
+  // }
 
   // typahead page
   .typeahead {
@@ -4825,7 +4825,7 @@
       }
     }
 
-    // blog page
+    // // blog page
     // .page-wrapper {
     //   .page-body-wrapper {
     //     .page-body {
@@ -4870,6 +4870,7 @@
     //     }
     //   }
     // }
+
     // search page
     .search-page {
       ul {

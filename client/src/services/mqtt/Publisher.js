@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Form, Input, Card, Button, FormGroup } from 'reactstrap';
-import { newvalue } from '../../helpers/chartsData/Generate';
+import { newvalue } from '../../helpers/Generate';
 
 const Publisher = ({ publish, topic, qos, enabledForm = false }) => {
 

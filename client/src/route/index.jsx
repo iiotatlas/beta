@@ -3,13 +3,13 @@ import Default from "../components/dashboard/default";
 
 //Nodes
 import NodeScreen from "../components/nodes/NodeScreen";
-import Node1 from "../systems/Node1";
-import Node2 from "../systems/Node2";
-import Node3 from "../systems/Node3";
-import Node4 from "../systems/Node4";
-import Node5 from "../systems/Node5";
-import Node6 from "../systems/Node6";
-import Node7 from "../systems/Node7";
+import Node1 from "../components/systems/Node1";
+import Node2 from "../components/systems/Node2";
+import Node3 from "../components/systems/Node3";
+import Node4 from "../components/systems/Node4";
+import Node5 from "../components/systems/Node5";
+import Node6 from "../components/systems/Node6";
+import Node7 from "../components/systems/Node7";
 
 // widgets
 import GeneralWidget from "../components/widgets/general";

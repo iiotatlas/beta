@@ -194,42 +194,42 @@
 }
 
 .contacts-tabs {
-  .nav-pills {
-    border-right: 1px solid $light-color;
-    height: 100%;
+  // .nav-pills {
+  //   border-right: 1px solid $light-color;
+  //   height: 100%;
 
-    .nav-link,
-    .show {
+  //   .nav-link,
+  //   .show {
 
-      &.active,
-      >.nav-link {
-        background-color: rgba($primary-color, 0.05);
-        color: $theme-body-font-color;
-      }
-    }
+  //     &.active,
+  //     >.nav-link {
+  //       background-color: rgba($primary-color, 0.05);
+  //       color: $theme-body-font-color;
+  //     }
+  //   }
 
-    .nav-link {
-      color: $theme-body-font-color;
-      padding: 0;
+  //   .nav-link {
+  //     color: $theme-body-font-color;
+  //     padding: 0;
 
-      .media {
-        .img-50 {
-          height: 50px;
-        }
-      }
+  //     .media {
+  //       .img-50 {
+  //         height: 50px;
+  //       }
+  //     }
 
-    }
+  //   }
 
-    .nav-item {
-      +.nav-item {
-        border-top: 1px solid $light-color;
-      }
-    }
+  //   .nav-item {
+  //     +.nav-item {
+  //       border-top: 1px solid $light-color;
+  //     }
+  //   }
 
-    .media {
-      padding: 20px;
-    }
-  }
+  //   .media {
+  //     padding: 20px;
+  //   }
+  // }
   .card {
     box-shadow: none;
   }
@@ -279,12 +279,12 @@
     }
   }
 
-  .contacts-tabs {
-    .nav-pills {
-      border-right: none;
-      border-bottom: 1px solid $light-color;
-    }
-  }
+  // .contacts-tabs {
+  //   .nav-pills {
+  //     border-right: none;
+  //     border-bottom: 1px solid $light-color;
+  //   }
+  // }
 
   .list-persons {
     .profile-mail {
@@ -312,11 +312,11 @@
       }
     }
 
-    .nav-pills {
-      .media {
-        padding: 15px;
-      }
-    }
+    // .nav-pills {
+    //   .media {
+    //     padding: 15px;
+    //   }
+    // }
   }
 
   .list-persons {
@@ -330,15 +330,15 @@
       }
     }
 
-    .nav-pills {
-      .nav-link {
-        .media {
-          .media-body {
-            text-align: left;
-          }
-        }
-      }
-    }
+    // .nav-pills {
+    //   .nav-link {
+    //     .media {
+    //       .media-body {
+    //         text-align: left;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .contact-editform {

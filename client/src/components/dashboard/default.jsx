@@ -9,6 +9,9 @@ import Schema from './Schema';
 
 
 const Default = () => {
+
+  // console.log(JSON.parse(localStorage.getItem("plant")));
+
   return (
     <>
       <Breadcrumb parent="Principal" title="Planta Vinto" />

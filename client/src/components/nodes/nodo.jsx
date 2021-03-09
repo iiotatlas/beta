@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
 
 import Breadcrumb from "../../layout/breadcrumb";
@@ -45,6 +45,20 @@ const Nodo = ({optionsData, optionsMqtt}) => {
     // dataY,
   }
   // console.log(optionsDataPlus);
+
+  
+  const [didMount, setDidMount] = useState(false); 
+
+  useEffect(() => {
+    console.log("ingresando a nodojs");
+    setDidMount(true);
+    return () => setDidMount(false);
+  }, [])
+
+  if(!didMount) {
+    return null;
+  }
+
 
   return (
     <>

@@ -4,7 +4,7 @@ import { Nav, NavLink, TabContent, TabPane, Button, Modal, ModalHeader, ModalBod
 import { useDispatch, useSelector } from 'react-redux'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { toast } from 'react-toastify';
-import {Configuration,ModalTitle,CopyText,Cancel,LayoutType,LTR,RTL,Box,SidebarType,SidebarSettings,Default,Border,IconColor,RouterAnimation,ZoomFade,SildeFade,Fade,ZoomOut,None,MixLayout,FadeBottom, UnlimitedColor, QuickOption,Apply} from '../../constant'
+import { Configuration, ModalTitle, CopyText, Cancel, LayoutType, LTR, RTL, Box, SidebarType, SidebarSettings, Default, Border, IconColor, RouterAnimation, ZoomFade, SildeFade, Fade, ZoomOut, None, MixLayout, FadeBottom, UnlimitedColor, QuickOption, Apply } from '../../constant'
 import {
     ADD_LAYOUT,
     ADD_SIDEBAR_TYPES,
@@ -20,7 +20,7 @@ const Themecustomizer = (props) => {
     const [rightSidebar, setRightSidebar] = useState(true);
     const [showHorizontal, setShowHorizontal] = useState(true);
     const [showBoxLayout, setshowBoxLayout] = useState(true);
-     // eslint-disable-next-line
+    // eslint-disable-next-line
     const [activeTab1, setActiveTab1] = useState('1');
     const default_color = localStorage.getItem('default_color');
     const secondary_color = localStorage.getItem('secondary_color');
@@ -35,8 +35,8 @@ const Themecustomizer = (props) => {
     const mix_background_layout = configDB.color.mix_background_layout;
     const config_primary = configDB.color.primary_color;
     const config_secondary = configDB.color.secondary_color;
-    const [colorBackground1,setColorBackground1] = useState(default_color || config_primary)
-    const [colorBackground2,setColorBackground2] = useState(secondary_color || config_secondary)
+    const [colorBackground1, setColorBackground1] = useState(default_color || config_primary)
+    const [colorBackground2, setColorBackground2] = useState(secondary_color || config_secondary)
     const width = useWindowSize()
 
     function useWindowSize() {
@@ -76,8 +76,8 @@ const Themecustomizer = (props) => {
                     secondary_color: config_secondary,
                 }
             })
-        }else{
-            document.documentElement.style.setProperty('--theme-deafult',default_color);
+        } else {
+            document.documentElement.style.setProperty('--theme-deafult', default_color);
             document.documentElement.style.setProperty('--theme-secondary', secondary_color);
             dispatch({
                 type: ADD_COLOR,
@@ -170,7 +170,7 @@ const Themecustomizer = (props) => {
 
         if (type === "horizontal-wrapper") {
             setshowBoxLayout(false)
-        }else{
+        } else {
             setshowBoxLayout(true)
         }
 
@@ -211,11 +211,11 @@ const Themecustomizer = (props) => {
     }
 
     const handleUnlimatedColor1Change = (e) => {
-        const {value} = e.target
+        const { value } = e.target
         setColorBackground1(value)
     }
     const handleUnlimatedColor2Change = (e) => {
-        const {value} = e.target
+        const { value } = e.target
         setColorBackground2(value)
     }
     const OnUnlimatedColorClick = () => {
@@ -226,16 +226,16 @@ const Themecustomizer = (props) => {
     return (
         <Fragment>
             {/* TODO: personalizacion de la barra */}
-             <div className="customizer-links">
-                <Nav className="flex-column nac-pills"> 
+            <div className="customizer-links">
+                <Nav className="flex-column nac-pills">
                     <NavLink onClick={openCustomizer}>
-                        <div className="settings" > 
+                        <div className="settings" >
                             <i className="icon-settings"></i>
-                        </div> 
-                        <span>{QuickOption}</span>   
-                    </NavLink> 
+                        </div>
+                        <span>{QuickOption}</span>
+                    </NavLink>
                 </Nav>
-            </div> 
+            </div>
 
             <div className="customizer-contain">
                 <div className="tab-content" id="c-pills-tabContent">
@@ -258,7 +258,6 @@ const Themecustomizer = (props) => {
                                             <div>  {"static data"} = &#123;</div>
                                             <div>       {"settings"}&#58; &#123;</div>
                                             <div>           {"layout_type"}&#58;  '{configDB.settings.layout_type}',</div>
-
                                             <div>       {"sidebar"}&#58; &#123;</div>
                                             <div>           {"type"}&#58; '{configDB.settings.sidebar.type}',</div>
                                             <div>           {"body_type"}&#58; '{configDB.settings.sidebar.body_type}' </div>
@@ -328,38 +327,38 @@ const Themecustomizer = (props) => {
                                         </div>
                                     </li>
                                     {showBoxLayout ?
-                                    <li className={`${layout_type === 'box-layout' ? 'active' : ''}`} onClick={() => handleLayout('box-layout')}>
-                                        <div className="header bg-light">
-                                            <ul>
-                                                <li></li><li></li><li></li>
-                                            </ul>
-                                        </div>
-                                        <div className="body">
-                                            <ul>
-                                                <li className="bg-light sidebar"></li>
-                                                <li className="bg-light body">
-                                                    <span className="badge badge-primary">{Box}</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    :""}
+                                        <li className={`${layout_type === 'box-layout' ? 'active' : ''}`} onClick={() => handleLayout('box-layout')}>
+                                            <div className="header bg-light">
+                                                <ul>
+                                                    <li></li><li></li><li></li>
+                                                </ul>
+                                            </div>
+                                            <div className="body">
+                                                <ul>
+                                                    <li className="bg-light sidebar"></li>
+                                                    <li className="bg-light body">
+                                                        <span className="badge badge-primary">{Box}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        : ""}
                                 </ul>
                                 <h6 className="">{SidebarType}</h6>
                                 <ul className="sidebar-type layout-grid">
-                                    {showHorizontal ? 
-                                    <li data-attr="normal-sidebar" className="normal-sidebar" onClick={(e) => handleSidebarType(e, 'horizontal-wrapper', 'horizontal-menu')}>
-                                        <div className="header bg-light">
-                                            <ul> <li></li><li></li><li></li></ul>
-                                        </div>
-                                        <div className="body">
-                                            <ul>
-                                                <li className="bg-dark sidebar"></li>
-                                                <li className="bg-light body"> </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    :""}
+                                    {showHorizontal ?
+                                        <li data-attr="normal-sidebar" className="normal-sidebar" onClick={(e) => handleSidebarType(e, 'horizontal-wrapper', 'horizontal-menu')}>
+                                            <div className="header bg-light">
+                                                <ul> <li></li><li></li><li></li></ul>
+                                            </div>
+                                            <div className="body">
+                                                <ul>
+                                                    <li className="bg-dark sidebar"></li>
+                                                    <li className="bg-light body"> </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        : ""}
                                     <li className="active" data-attr="compact-sidebar" onClick={(e) => handleSidebarType(e, 'compact-wrapper', 'sidebar-icon')}>
                                         <div className="header bg-light">
                                             <ul> <li></li><li></li><li></li></ul>
@@ -418,9 +417,9 @@ const Themecustomizer = (props) => {
                                 </Input>
 
                                 <h6>{UnlimitedColor}</h6>
-                                <ul className="layout-grid unlimited-color-layout"> 
-                                    <input  type="color" name="Color-Background1"  value={colorBackground1} onChange={(e) => handleUnlimatedColor1Change(e)} /> 
-                                    <input  type="color" name="Color-Background2"  value={colorBackground2} onChange={(e) => handleUnlimatedColor2Change(e)}/> 
+                                <ul className="layout-grid unlimited-color-layout">
+                                    <input type="color" name="Color-Background1" value={colorBackground1} onChange={(e) => handleUnlimatedColor1Change(e)} />
+                                    <input type="color" name="Color-Background2" value={colorBackground2} onChange={(e) => handleUnlimatedColor2Change(e)} />
                                     <Button color="primary" className="color-apply-btn color-apply-btn" disabled={!(colorBackground1 && colorBackground2)} onClick={() => OnUnlimatedColorClick()}>{Apply}</Button>
                                 </ul>
 
