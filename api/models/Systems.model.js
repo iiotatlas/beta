@@ -11,9 +11,9 @@ const SystemSchema = Schema({
         type: String,
         required: true
     },
-    numberNodes: {
-        type: Number
-    },
+    // numberNodes: {
+    //     type: Number
+    // },
 });
 
 /** Convertir a json */

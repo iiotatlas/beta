@@ -20,7 +20,13 @@ const NodeSchema = Schema({
     unitX: {
         type: String,
     },
-    idSystem: {
+    topMap: {
+        type: String,
+    },
+    leftMap: {
+        type: String,
+    },
+    codSystem: {
         type: String,
     },
     // max: { type: String},

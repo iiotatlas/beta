@@ -154,3 +154,5 @@ nvm ...
 node v14.15.4
 
  <!-- ssh -i "key-beta-v1.pem" ubuntu@ec2-3-21-127-239.us-east-2.compute.amazonaws.com -->
+
+ ### manejo de server continuo 
