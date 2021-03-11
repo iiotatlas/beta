@@ -87,3 +87,8 @@ RESOLVE .- La solucion esta en https://prnt.sc/w7hrdi o https://stackoverflow.co
     1.1. Secret access key: /ibXqXDKH9LYspEoPWIoqD0Dr1o/fU79d4feT6Zz
 
 1. conectar bucket S3 con ptar=back
+
+
+## Server permanentes
+link oficial https://github.com/Unitech/pm2 
+link de otra referencias https://stackoverflow.com/questions/12701259/how-to-make-a-node-js-application-run-permanently 

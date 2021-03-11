@@ -19,42 +19,28 @@ let menuItems = [
         active: false,
         children: [
             {
+                // path: `${process.env.PUBLIC_URL}/Home`,
                 path: `${process.env.PUBLIC_URL}/Home`,
                 title: 'Home',
-                type: 'link'
-            },
-        ]
-    },
-    {
-        title: 'Menu test',
-        icon: Cpu,
-        type: 'sub',
-        active: false,
-        children: [
-            {
-                path: `${process.env.PUBLIC_URL}/node/test`,
-                title: 'node test',
                 type: 'link'
             },
         ]
     }
 ]
 
+
 /** Generacion de array de los sistemas y nodos que la componen */
 const beforeMenuItemsLength = menuItems.length;
 let arrayNode = [];
-let numberNode = 1;
 for (let indexSystem = 0; indexSystem < systems.length; indexSystem++) {
 
     arrayNode = [];
     for (let indexNode = 0; indexNode < systems[indexSystem].nodes.length; indexNode++) {
         arrayNode[indexNode] = { 
-            path: `${process.env.PUBLIC_URL}/node${numberNode}`,
+            path: `${process.env.PUBLIC_URL}/node/${systems[indexSystem].nodes[indexNode].codNode}`,
             title: systems[indexSystem].nodes[indexNode].name,
             type: 'link'
         };
-
-        numberNode++;
     }
 
     menuItems[indexSystem + beforeMenuItemsLength] = {

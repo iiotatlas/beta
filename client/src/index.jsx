@@ -27,12 +27,7 @@ import Forgetpwd from "./pages/authentication/forgetpwd";
 import Resetpwd from "./pages/authentication/resetpwd";
 
 // Error page
-import Error400 from "./pages/errors/error400";
-import Error401 from "./pages/errors/error401";
-import Error403 from "./pages/errors/error403";
 import Error404 from "./pages/errors/error404";
-import Error500 from "./pages/errors/error500";
-import Error503 from "./pages/errors/error503";
 
 // Maintenanc
 import Maintenance from "./pages/maintenance";
@@ -46,7 +41,7 @@ import { MqttContext } from "./services/mqtt/MqttContext";
 // configureFakeBackend();
 
 const Root = () => {
-  
+
   // console.log("root of index.jsx");
 
   const [anim, setAnim] = useState("");
@@ -75,7 +70,7 @@ const Root = () => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    if(client && connectStatus==="Connected") {
+    if (client && connectStatus === "Connected") {
       setShow(false)
     }
   }, [client, connectStatus]);
@@ -112,18 +107,13 @@ const Root = () => {
             <Route path={`${process.env.PUBLIC_URL}/pages/auth/unlockUser`} component={UnlockUser} />
             <Route path={`${process.env.PUBLIC_URL}/pages/auth/resetPwd`} component={Resetpwd} />
 
-            <Route path={`${process.env.PUBLIC_URL}/pages/errors/error400`} component={Error400} />
-            <Route path={`${process.env.PUBLIC_URL}/pages/errors/error401`} component={Error401} />
-            <Route path={`${process.env.PUBLIC_URL}/pages/errors/error403`} component={Error403} />
             <Route path={`${process.env.PUBLIC_URL}/pages/errors/error404`} component={Error404} />
-            <Route path={`${process.env.PUBLIC_URL}/pages/errors/error500`} component={Error500} />
-            <Route path={`${process.env.PUBLIC_URL}/pages/errors/error503`} component={Error503} />
 
             <Route path={`${process.env.PUBLIC_URL}/pages/maintenance`} component={Maintenance} />
 
             <Route path={`${process.env.PUBLIC_URL}/callback`} render={() => <Callback />} />
 
-            {currentUser !== null || authenticated || jwt_token ? (
+            {currentUser !== null || authenticated || jwt_token ? 
               <MqttContext.Provider value={initMqtt}>
                 <Connection />
 
@@ -133,16 +123,10 @@ const Root = () => {
                   (
                     <App>
                       <Route
-                        exact
-                        path={`${process.env.PUBLIC_URL}/`}
-                        render={() => {
-                          return (
-                            <Redirect
-                              to={`${process.env.PUBLIC_URL}/home`}
-                            />
-                          );
-                        }}
-                      />
+                        exact path={`${process.env.PUBLIC_URL}/`} render={() => {
+                          return ( <Redirect to={`${process.env.PUBLIC_URL}/home`} /> );
+                      }} />
+
                       <TransitionGroup>
                         {routes.map(({ path, Component }) => (
                           <Route
@@ -159,7 +143,7 @@ const Root = () => {
                               >
                                 {/* TODO: hacer que solo me envie el path o que solo este disponible para node/:nodeID */}
                                 <div>
-                                  <Component match={match}/>
+                                  <Component match={match} />
                                   {/* <Component match={match.params.nodeId}/> */}
                                 </div>
                               </CSSTransition>
@@ -167,13 +151,15 @@ const Root = () => {
                           </Route>
                         ))}
                       </TransitionGroup>
+                      <Route component={Error404} />
                     </App>
                   )
                 }
               </MqttContext.Provider>
-            ) : (
-                <Redirect to={`${process.env.PUBLIC_URL}/login`} />
-              )}
+              :
+              <Redirect to={`${process.env.PUBLIC_URL}/login`} />
+            }
+            
           </Switch>
         </BrowserRouter>
       </Provider>
